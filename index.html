@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>verifieds</title>
+<meta name="description" content="live registry of roblox accounts holding the verified badge">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="badge.png">
+<meta name="theme-color" content="#0b0f14">
+<meta property="og:title" content="verifieds">
+<meta property="og:description" content="live registry of roblox accounts holding the verified badge">
+<meta property="og:image" content="/badge.png">
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="/">verifieds</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="count-row">
+      <span class="count" id="stat-tracked">0</span>
+      <img class="count-badge" src="badge.png" alt="">
+    </div>
+    <p class="hero-claim">roblox accounts that hold the verified badge right now</p>
+  </div>
+</header>
+
+<main class="wrap cols" id="directory">
+  <section class="card registry">
+    <h2>registry</h2>
+    <input type="search" id="search" placeholder="search by username or display name" autocomplete="off">
+    <table class="user-table">
+      <thead><tr><th>account</th><th class="added-head">added</th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+    <div class="empty" id="empty" hidden>no accounts match</div>
+    <button class="more" id="more" hidden>show more</button>
+  </section>
+
+  <aside class="rail">
+    <section class="card" id="changes">
+      <h2>recent changes</h2>
+      <div id="changes-list"></div>
+      <div class="empty" id="changes-empty" hidden>no changes recorded yet</div>
+    </section>
+
+    <section class="card" id="about">
+      <h2>about</h2>
+      <p>verifieds only lists roblox accounts that currently hold the verified badge, rechecked around the clock straight from the roblox api</p>
+      <p>new badge holders are found automatically by crawling friends of known verified accounts and cross checking public verified lists, since roblox offers no way to list them all directly</p>
+      <p>accounts that lose the badge or get terminated are removed, every change lands in the feed, and the page updates itself as it happens</p>
+    </section>
+  </aside>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
