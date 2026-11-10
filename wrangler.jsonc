@@ -1,0 +1,20 @@
+{
+  "name": "verifieds",
+  "main": "_worker.js",
+  "compatibility_date": "2026-08-01",
+  "workers_dev": false,
+  "preview_urls": false,
+  "assets": {
+    "directory": "./",
+    "binding": "ASSETS"
+  },
+  "kv_namespaces": [
+    {
+      "binding": "DATA",
+      "id": "9878406e3ef74deb8556fa6fab1a3bc7"
+    }
+  ],
+  "triggers": {
+    "crons": ["*/5 * * * *"]
+  }
+}
